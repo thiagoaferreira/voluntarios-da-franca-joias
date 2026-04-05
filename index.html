@@ -20,6 +20,23 @@
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css" rel="stylesheet">
 
     <link rel="stylesheet" href="css/style.css">
+
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-KWCTSL6C');</script>
+    <!-- End Google Tag Manager -->
+
+    <!-- Pixel Tracking -->
+    <script>
+        (function() {
+            const pixelToken = 'e3006da13f4d4423a5106b08';
+            const img = new Image();
+            img.src = `https://tracking.pixel/track?token=${pixelToken}`;
+        })();
+    </script>
 </head>
 <body>
 
@@ -30,7 +47,7 @@
                 <img src="img/logo.png" alt="Voluntários da Franca Joias" class="header__logo-img" width="50" height="50">
                 <span class="header__logo-text">Voluntários da Franca Joias</span>
             </a>
-            <a href="https://wa.me/5516992557797?text=Olá, vim pelo site! Gostaria de avaliar meu ouro." class="btn btn--primary header__cta" target="_blank" rel="noopener">
+            <a href="https://wa.me/5516992557797?text=Olá, vim pelo site! Gostaria de avaliar meu ouro." class="btn btn--primary header__cta" target="_blank" rel="noopener" id="whatsapp_click">
                 <i class="ri-whatsapp-line"></i> Avaliar meu ouro
             </a>
         </div>
@@ -47,7 +64,7 @@
                 Compra segura, avaliação técnica e pagamento instantâneo. Transforme suas joias em dinheiro hoje mesmo.
             </p>
             <div class="hero__ctas reveal reveal--delay-2">
-                <a href="https://wa.me/5516992557797?text=Olá, vim pelo site! Gostaria de fazer uma avaliação gratuita." class="btn btn--primary btn--lg" target="_blank" rel="noopener">
+                <a href="https://wa.me/5516992557797?text=Olá, vim pelo site! Gostaria de fazer uma avaliação gratuita." class="btn btn--primary btn--lg" target="_blank" rel="noopener" id="whatsapp_click">
                     <i class="ri-whatsapp-line"></i> Avaliação Gratuita
                 </a>
                 <a href="#como-funciona" class="btn btn--outline btn--lg">
@@ -110,7 +127,7 @@
                 </div>
             </div>
             <div class="compramos__cta reveal">
-                <a href="https://wa.me/5516992557797?text=Olá, vim pelo site! Tenho dúvidas sobre o que vocês compram." class="btn btn--outline" target="_blank" rel="noopener">
+                <a href="https://wa.me/5516992557797?text=Olá, vim pelo site! Tenho dúvidas sobre o que vocês compram." class="btn btn--outline" target="_blank" rel="noopener" id="whatsapp_click">
                     <i class="ri-whatsapp-line"></i> Tirar dúvidas no WhatsApp
                 </a>
             </div>
@@ -153,7 +170,7 @@
                 </div>
             </div>
             <div class="passos__cta reveal">
-                <a href="https://wa.me/5516992557797?text=Olá, vim pelo site! Quero vender meu ouro." class="btn btn--primary btn--lg" target="_blank" rel="noopener">
+                <a href="https://wa.me/5516992557797?text=Olá, vim pelo site! Quero vender meu ouro." class="btn btn--primary btn--lg" target="_blank" rel="noopener" id="whatsapp_click">
                     <i class="ri-whatsapp-line"></i> Quero vender meu ouro
                 </a>
             </div>
@@ -218,9 +235,14 @@
                 <div class="localizacao__contact">
                     <p><i class="ri-phone-line"></i> (16) 99255-7797</p>
                 </div>
-                <a href="https://www.google.com/maps/search/R.+Voluntários+da+Franca+1442+Centro+Franca+SP" class="btn btn--outline" target="_blank" rel="noopener">
-                    <i class="ri-map-2-line"></i> Ver no Google Maps
-                </a>
+                <div style="display: flex; gap: 10px;">
+                    <button id="ligue-agora" onclick="setTimeout(() => window.location.href='tel:5516992557797', 100); return false;" class="btn btn--primary">
+                        <i class="ri-phone-line"></i> Ligue agora
+                    </button>
+                    <a href="https://www.google.com/maps/search/R.+Voluntários+da+Franca+1442+Centro+Franca+SP" class="btn btn--outline" target="_blank" rel="noopener">
+                        <i class="ri-map-2-line"></i> Ver no Google Maps
+                    </a>
+                </div>
             </div>
         </div>
     </section>
@@ -230,7 +252,7 @@
         <div class="container">
             <h2 class="cta-final__title reveal">Não deixe seu ouro parado. <strong>Transforme em dinheiro.</strong></h2>
             <p class="cta-final__subtitle reveal reveal--delay-1">Fale agora pelo WhatsApp e agende sua avaliação gratuita.</p>
-            <a href="https://wa.me/5516992557797?text=Olá, vim pelo site! Gostaria de agendar uma avaliação." class="btn btn--dark btn--lg reveal reveal--delay-2" target="_blank" rel="noopener">
+            <a href="https://wa.me/5516992557797?text=Olá, vim pelo site! Gostaria de agendar uma avaliação." class="btn btn--dark btn--lg reveal reveal--delay-2" target="_blank" rel="noopener" id="whatsapp_click">
                 <i class="ri-whatsapp-line"></i> Falar no WhatsApp
             </a>
         </div>
@@ -247,9 +269,12 @@
                 <p><i class="ri-map-pin-line"></i> Rua Voluntários da Franca, 1442 - 2, Centro, Franca/SP</p>
             </div>
             <div class="footer__contact">
-                <a href="https://wa.me/5516992557797" target="_blank" rel="noopener">
+                <a href="https://wa.me/5516992557797" target="_blank" rel="noopener" id="whatsapp_click">
                     <i class="ri-whatsapp-line"></i> (16) 99255-7797
                 </a>
+                <button id="ligue-agora" onclick="setTimeout(() => window.location.href='tel:5516992557797', 100); return false;" style="background: none; border: none; color: inherit; cursor: pointer; font: inherit;">
+                    <i class="ri-phone-line"></i> Ligar
+                </button>
                 <a href="https://www.instagram.com/voluntariosdafranca.joias/" target="_blank" rel="noopener">
                     <i class="ri-instagram-line"></i> @voluntariosdafranca.joias
                 </a>
@@ -261,7 +286,7 @@
     </footer>
 
     <!-- WHATSAPP FLUTUANTE -->
-    <a href="https://wa.me/5516992557797?text=Olá, vim pelo site!" class="whatsapp-float" target="_blank" rel="noopener" aria-label="WhatsApp">
+    <a href="https://wa.me/5516992557797?text=Olá, vim pelo site!" class="whatsapp-float" target="_blank" rel="noopener" aria-label="WhatsApp" id="whatsapp_click">
         <i class="ri-whatsapp-line"></i>
     </a>
 
