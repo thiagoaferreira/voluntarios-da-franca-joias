@@ -222,13 +222,15 @@ console.log('%cPixel de Rastreamento Ativo - Token: e3006da13f4d4423a5106b08', '
   updateLinks();
 
   // Re-run on dynamic content (SPAs, lazy-loaded elements)
-  var observer=new MutationObserver(function(mutations){
-    var hasNewLinks=mutations.some(function(m){
-      return m.addedNodes.length>0;
+  if(document.body){
+    var observer=new MutationObserver(function(mutations){
+      var hasNewLinks=mutations.some(function(m){
+        return m.addedNodes.length>0;
+      });
+      if(hasNewLinks)updateLinks();
     });
-    if(hasNewLinks)updateLinks();
-  });
-  observer.observe(document.body,{childList:true,subtree:true});
+    observer.observe(document.body,{childList:true,subtree:true});
+  }
 
   // ========== DEVICE / BROWSER / OS DETECTION ==========
   function getDevice(){
